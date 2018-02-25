@@ -1,0 +1,13 @@
+{
+  "name": "nodejs-server-intro",
+  "version": "1.0.0",
+  "description": "nodejs server intro",
+  "main": "index.js",
+  "keywords": [
+    "server",
+    "intro",
+    "nodejs"
+  ],
+  "author": "BS",
+  "license": "MIT"
+}
