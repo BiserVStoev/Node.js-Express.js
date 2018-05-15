@@ -1,0 +1,14 @@
+{
+  "name": "js-server-exercise",
+  "version": "1.0.0",
+  "description": "nodejs movieDb exercise",
+  "main": "index.js",
+  "author": "BS",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.9.2",
+    "gulp-uglify": "^3.0.0"
+  }
+}

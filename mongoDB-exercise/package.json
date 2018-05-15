@@ -1,0 +1,13 @@
+{
+  "name": "mongodb-exercise",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "BS",
+  "license": "MIT",
+  "dependencies": {
+    "formidable": "^1.2.0",
+    "mongodb": "^3.0.4",
+    "mongoose": "^5.0.10"
+  }
+}

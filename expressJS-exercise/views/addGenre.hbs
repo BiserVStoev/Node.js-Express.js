@@ -1,0 +1,14 @@
+<h1></h1>
+    Add New Genre</h1>
+<div class="container">
+    <form action="/addGenre" enctype="multipart/form-data" method="POST">
+        <label for="genreName">Title</label>
+        <input type="text" id="genreName" name="genreName" placeholder="The title of the genre">
+
+        <input type="submit" value="Submit">
+    </form>
+</div>
+
+{{#if status}}
+<div id="successBox"><h2 id="successMessage">Genre Added</h2></div>
+{{/if}}
