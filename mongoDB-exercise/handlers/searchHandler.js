@@ -49,7 +49,7 @@ module.exports = (req, res) => {
       minDate = new Date(req.pathquery.afterDate);
     }
     if (req.pathquery.beforeDate) {
-      maxDate = new Date(query.pathquery.beforeDate);
+      maxDate = new Date(req.pathquery.beforeDate);
     }
     let limit = 10;
     if (req.pathquery.Limit && req.pathquery.Limit > 0) {
