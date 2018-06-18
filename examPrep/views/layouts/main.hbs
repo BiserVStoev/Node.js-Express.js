@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Doner Place</title>
+  <link href="/css/site.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <span class="logo">Doner Place</span>
+      {{#if currentUser}}
+      <span class="greeting">Welcome, {{currentUser.username}}! |
+        <form style="display: inline-block;" id="myLogoutForm" method="POST" action="/users/logout">
+          <input type="hidden" name="name" value="value" />
+          <a onclick="document.getElementById('myLogoutForm').submit();">[Logout]</a>
+        </form>
+      </span>
+      {{/if}}
+      <ul class="menu">
+        <li>
+          <a class="button" href="/">Home</a>
+        </li>
+        <li>
+          <a class="button" href="/order">Order Status</a>
+        </li>
+        {{#unless currentUser}}
+        <li>
+          <a class="button" href="/users/login">Login</a>
+        </li>
+        <li>
+          <a class="button" href="/users/register">Register</a>
+        </li>
+        {{/unless}}
+
+      </ul>
+    </header>
+    {{{body}}}
+    <footer>Doner Place &copy; 2017</footer>
+  </div>
+</body>
+
+</html>

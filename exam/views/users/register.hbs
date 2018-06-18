@@ -1,0 +1,17 @@
+<section>
+  <h2>Register</h2>
+  {{#if error}}
+  <p class="error">{{error}}</p>
+  {{/if}}
+  <div class="spacer">
+    <form action="/register" method="POST">
+      <label>Email:</label>
+      <input type="text" name="email" value="{{#if formData}}{{formData.email}}{{/if}}">
+      <label>Password:</label>
+      <input type="password" name="password" value="{{#if formData}}{{formData.password}}{{/if}}">
+      <label>Repeat password:</label>
+      <input type="password" name="repeatPassword" value="{{#if formData}}{{formData.repeatPassword}}{{/if}}">
+      <input type="submit" value="Register">
+    </form>
+  </div>
+</section>

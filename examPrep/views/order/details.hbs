@@ -1,0 +1,41 @@
+<h1>Order details</h1>
+<div class="catalog">
+    <div class="column">
+        <img src="/img/chicken-21.png">
+    </div>
+    <div class="column">
+        <h2>{{productName}}</h2>
+        <h3>From {{dateCreated}}</h3>
+        <div class="toppings">
+            {{#each toppings}}
+            <span style="text-transform:capitalize;">{{this}}</span><br>
+            {{else}}
+            <p style="font-style:italic;">No toppings.</p>
+            {{/each}}
+        </div>
+    </div>
+    <div class="status">
+        <div class="status-block">
+            <span class="progress-right"></span>
+            <span class="checkpoint {{#if pending}}current{{/if}}"></span>
+            <br> Pending
+        </div>
+        <div class="status-block">
+            <span class="progress-left"></span>
+            <span class="progress-right"></span>
+            <span class="checkpoint {{#if progress}}current{{/if}}"></span>
+            <br> In progress
+        </div>
+        <div class="status-block">
+            <span class="progress-left"></span>
+            <span class="progress-right"></span>
+            <span class="checkpoint {{#if transit}}current{{/if}}"></span>
+            <br> In transit
+        </div>
+        <div class="status-block">
+            <span class="progress-left"></span>
+            <span class="checkpoint {{#if delivered}}current{{/if}}"></span>
+            <br> Delivered
+        </div>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+<div class="spacer">
+    <h2>{{title}}
+        <div class="controls">
+            {{#if currentUser}}
+                {{#if isLocked}}
+                    {{#if isAdmin}}
+                     <a href="/article/{{id}}/edit">[edit]</a>
+                    {{/if}}
+                {{else}}
+                    <a href="/article/{{id}}/edit">[edit]</a>
+                {{/if}}
+            
+            <a href="/article/{{id}}/history">[history]</a>
+            {{/if}}
+        </div>
+    </h2>
+    <article>
+        {{#each splittedContent}}
+        <p>{{this}}</p>
+        {{/each}}
+    </article>
+</div>
